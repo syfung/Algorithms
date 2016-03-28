@@ -1,1 +1,2 @@
-README
+README for libme
+This will be a C libaray than I will try to add in some common functions that I uses, for example error check wrapper for system calls.
