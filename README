@@ -1,2 +1,4 @@
-README for libme
-This will be a C libaray than I will try to add in some common functions that I uses, for example error check wrapper for system calls.
+README for Algorthms
+
+The point of this project is to get myself to learn the basic algorithms. I will try to implement my own version of some of the common 
+algorthims and a few variations.
