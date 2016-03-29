@@ -11,7 +11,7 @@ OBJS =$(patsubst %,$(ODIR)/%,$(_OBJS))
 all: sort_test
 
 sort_test: test.c $(OBJS)
-	$(CC)  -o $@ $< $(OBJS) $(CFLAG) -lrt
+	$(CC)  -o $@ $< $(OBJS) $(CFLAG)
 
 $(ODIR)/%.o: %.c $(DEPS)
 	mkdir -p $(ODIR)

@@ -30,9 +30,9 @@ int main(int argc, char **argv)
 
   insertion_sort(a, size);
 
-  printf("Original array: ");
+  printf("Sorted array: ");
   for(i = 0; i < size; i++) {
-    printf("%d %d\n", a[i], i);
+    printf("%d ", a[i]);
   }
   printf("\n");
 
