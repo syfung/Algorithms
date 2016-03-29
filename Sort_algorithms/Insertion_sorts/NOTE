@@ -1,0 +1,15 @@
+Insertion sort
+
+Wost case: O(n^2)
+Worst case spzce complexity: O(n) total, O(1) auxiliary
+
+Nice feature: can sort a list as receiving it.
+
+My implementation:
+   There is a really small different between the a version and the b
+   version. A small test show that a version is slightly faster
+   (~0.001s). Which make senses since a version only have one
+   assignment operation in the inner loop whereas b version have two.
+   
+
+
