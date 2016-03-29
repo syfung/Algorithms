@@ -1,5 +1,5 @@
 CC=gcc
-CFLAG=-Wall -W -std=c99
+CFLAG=-Wall -W
 
 ODIR=bin
 
@@ -11,8 +11,8 @@ OBJS =$(patsubst %,$(ODIR)/%,$(_OBJS))
 all: sort_test
 
 sort_test: test.c $(OBJS)
-	$(CC) $(CFLAG) -o $@ $< $(OBJS)
+	$(CC)  -o $@ $< $(OBJS) $(CFLAG) -lrt
 
 $(ODIR)/%.o: %.c $(DEPS)
 	mkdir -p $(ODIR)
-	$(CC) $(CFLAG) -c -o $@ $<
+	$(CC) -c -o $@ $< $(CFLAG)
