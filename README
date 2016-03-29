@@ -1,2 +1,5 @@
-README for libme
-This will be a C libaray than I will try to add in some common functions that I uses, for example error check wrapper for system calls.
+README for Algorithms
+
+Joshua Fung <syfung00@gmail.com>
+
+This is a project to implement some basic algorithms and variations. Also to get familiarise with them.
