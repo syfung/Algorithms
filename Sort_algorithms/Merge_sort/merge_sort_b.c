@@ -23,7 +23,7 @@ int *split_merge(int *a, int *temp, int i_start, int i_end)
 int *merge_b(int *a, int i_start, int i_middle, int i_end\
 	     , int *temp)
 {
-  i = i_start, j = i_middle;
+  int i = i_start, j = i_middle;
     
   // While there are elements in the left or right runs...
   int k;
