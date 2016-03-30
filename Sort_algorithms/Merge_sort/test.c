@@ -55,7 +55,7 @@ int main(int argc, char **argv)
 		    - ((double)tstart.tv_sec + 1.0e-9*tstart.tv_nsec));
   }
 
-  printf("Average time: %.5lf\n", time_passed / 1000);
+  printf("Average time: %.8lf\n", time_passed / 1000);
   
   return EXIT_SUCCESS;
 }

@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <limits.h>
 
 #include "merge_sort.h"
