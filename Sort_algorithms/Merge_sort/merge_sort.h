@@ -17,4 +17,13 @@ int *merge_sort(int *in_array, int i_start, int i_end);
 
 int *merge(int *in_array, int i_start, int i_middle, int i_end);
 
+int *merge_sort_b(int *in_array, int size);
+
+int *split_merge(int *in_array, int *temp, int i_start, int i_end);
+
+int *merge_b(int *in_array, int i_start, int i_middle, int i_end\
+	     , int *working_array);
+
+int *copy_array(int *target, int *source, int i_start, int i_end);
+		
 #endif /* MERGE_SORT_H */
