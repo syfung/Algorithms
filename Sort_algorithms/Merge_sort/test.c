@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <unistd.h>
 
-#include "insertion_sort.h"
+#include "merge_sort.h"
 
 int main(int argc, char **argv)
 {
@@ -28,7 +27,7 @@ int main(int argc, char **argv)
 
   printf("\n");
 
-  insertion_sort(a, size);
+  merge_sort(a, 0, size - 1);
 
   printf("Sorted array: ");
   for(i = 0; i < size; i++) {
@@ -42,14 +41,13 @@ int main(int argc, char **argv)
 
   int j;
   for(j = 0; j < 1000; j++) {
-    srand(time(NULL));
     for(i = 0; i < size; i++) {
       a[i] = rand() % 100 + 1;
     }
     
     clock_gettime(CLOCK_MONOTONIC, &tstart);
     
-    insertion_sort(a, size);
+    merge_sort(a, 0, size - 1);
     
     clock_gettime(CLOCK_MONOTONIC, &tend);
     
@@ -57,7 +55,7 @@ int main(int argc, char **argv)
 		    - ((double)tstart.tv_sec + 1.0e-9*tstart.tv_nsec));
   }
 
-  printf("Average time: %.5lf\n", time_passed / 1000);
+  printf("Average time: %.8lf\n", time_passed / 1000);
   
-  return 0;
+  return EXIT_SUCCESS;
 }

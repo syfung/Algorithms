@@ -1,0 +1,20 @@
+Insertion sort
+
+Wost case: O(n^2)
+Worst case spzce complexity: O(n) total, O(1) auxiliary
+
+Stable
+
+Nice feature: can sort a list as receiving it.
+
+My implementation:
+   There is a really small different between the a version and the b
+   version. A small test show that a version is slightly faster
+   (~0.001s). Which make senses since a version only have one
+   assignment operation in the inner loop whereas b version have two.
+
+Insertion sort is commonly good choice for small set. A small test
+with a roughly implemented merge test shows that the threshold is
+about 40 - 60. Which agree with the estimate form "Introduction to
+Algorithms", 8 n^2 = 64 n lg n. Which slove to about 43. In conclusion
+a size of 50 is better to use insertion sort. 
