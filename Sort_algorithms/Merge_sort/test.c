@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 
   printf("\n");
 
-  merge_sort(a, size);
+  merge_sort(a, 0, size - 1);
 
   printf("Sorted array: ");
   for(i = 0; i < size; i++) {
@@ -41,14 +41,13 @@ int main(int argc, char **argv)
 
   int j;
   for(j = 0; j < 1000; j++) {
-    srand(time(NULL));
     for(i = 0; i < size; i++) {
       a[i] = rand() % 100 + 1;
     }
     
     clock_gettime(CLOCK_MONOTONIC, &tstart);
     
-    merge_sort(a, size);
+    merge_sort(a, 0, size - 1);
     
     clock_gettime(CLOCK_MONOTONIC, &tend);
     

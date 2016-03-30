@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 #include "merge_sort.h"
 
 
 int main(int argc, char **argv) {
-  int a[10] = {1,3,5,7,9,2,4,6,8,10};
+  int a[10] = {1,3,5,7,INT_MAX,2,4,6,8,10};
 
   int i;
   for(i = 0; i < 10; i++) {
