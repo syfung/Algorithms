@@ -3,6 +3,8 @@ Insertion sort
 Wost case: O(n^2)
 Worst case spzce complexity: O(n) total, O(1) auxiliary
 
+Stable
+
 Nice feature: can sort a list as receiving it.
 
 My implementation:
@@ -15,4 +17,4 @@ Insertion sort is commonly good choice for small set. A small test
 with a roughly implemented merge test shows that the threshold is
 about 40 - 60. Which agree with the estimate form "Introduction to
 Algorithms", 8 n^2 = 64 n lg n. Which slove to about 43. In conclusion
-a size of 50 is better to use insertion sort. 
+a size of 40, it is more than likely better to use insertion sort. 
