@@ -5,7 +5,7 @@
 #include "merge_sort.h"
 
 
-int main(int argc, char **argv) {
+int main(void) {
   int a[10] = {1,3,5,7,INT_MAX,2,4,6,8,10};
 
   int i;

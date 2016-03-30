@@ -2,6 +2,7 @@
 
 #include "merge_sort.h"
 
+
 int *merge_sort(int *a, int i_start, int i_end)
 {
   if(i_start < i_end) {
