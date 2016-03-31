@@ -31,13 +31,5 @@
  */
 int *merge_sort(int *in_array, int size);
 
-static int *_merge(int *in_array, int start, int middle, int end); 
 
-static int *_split_merge(int *in_array, int *temp, int start, int end);
-
-static int *_merge_temp_array(int *in_array, int *temp\
-		       , int start, int middle, int end);
-
-static int *_copy_array(int *target, int *source, int start, int end);
-		
 #endif /* MERGE_SORT__V1_H */

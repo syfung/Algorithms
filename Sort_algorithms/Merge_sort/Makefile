@@ -15,13 +15,14 @@ ODIR_V1=$(ODIR)/v1
 
 DEPS_V1=merge_sort_v1.h
 
-_OBJS_V1=merge_sort_v1_a.o
+# The object with main needs to be the first
+_OBJS_V1=test_v1.o merge_sort_v1_a.o
 OBJS_V1=$(patsubst %,$(ODIR_V1)/%,$(_OBJS_V1))
 
 all: sort_test merge_test sort_b merge_sort_v1
 
-merge_sort_v1: test.c $(OBJS_V1)
-	$(CC)  -o $@ $< $(OBJS_V1) $(CFLAG)
+merge_sort_v1: $(OBJS_V1)
+	$(CC)  -o $@ $(OBJS_V1) $(CFLAG)
 
 sort_b: test_b.c $(B_OBJS)
 	$(CC)  -o $@ $< $(B_OBJS) $(CFLAG)
