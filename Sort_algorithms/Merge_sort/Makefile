@@ -8,9 +8,8 @@ DEPS=merge_sort.h
 _OBJS=merge_sort_a.o
 OBJS =$(patsubst %,$(ODIR)/%,$(_OBJS))
 
-# Wrong here!!
 _B_OBJS=merge_sort_b.o
-B_OBJS =$(patsubst %,$(ODIR)/%,$(_OBJS))
+B_OBJS =$(patsubst %,$(ODIR)/%,$(_B_OBJS))
 
 ODIR_V1=$(ODIR)/v1
 
@@ -24,7 +23,7 @@ all: sort_test merge_test sort_b merge_sort_v1
 merge_sort_v1: test.c $(OBJS_V1)
 	$(CC)  -o $@ $< $(OBJS_V1) $(CFLAG)
 
-sort_b: test.c $(B_OBJS)
+sort_b: test_b.c $(B_OBJS)
 	$(CC)  -o $@ $< $(B_OBJS) $(CFLAG)
 
 sort_test: test.c $(OBJS)

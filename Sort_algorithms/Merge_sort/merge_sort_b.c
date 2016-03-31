@@ -1,3 +1,5 @@
+#include "merge_sort.h"
+
 int *merge_sort_b(int *a, int size)
 {
   int temp[size];
@@ -43,7 +45,7 @@ int *merge_b(int *a, int i_start, int i_middle, int i_end\
 int *copy_array(int *target, int *source, int i_start, int i_end)
 {
   int i;
-  for(i = 0; i < i_end - i_start; i++) {
+  for(i = i_start; i < i_end; i++) {
     target[i] = source[i];
   }
   return target;
